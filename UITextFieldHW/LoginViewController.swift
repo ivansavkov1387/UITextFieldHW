@@ -62,9 +62,17 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    //MARK:- IBActions
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "loginSegue", sender: nil)
+    }
+    
     
     
 }
+
+    //MARK:- Extensions
 
 extension LoginViewController: UITextFieldDelegate {
     
