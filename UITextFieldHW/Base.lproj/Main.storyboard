@@ -109,15 +109,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLW-fb-5pJ">
-                                <rect key="frame" x="364" y="46" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button" backgroundImage="plus" catalog="system"/>
-                                <connections>
-                                    <action selector="addButton:" destination="yFU-Po-AMV" eventType="touchUpInside" id="BQW-z6-Imm"/>
-                                </connections>
-                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Bc-83-kyg">
                                 <rect key="frame" x="20" y="44" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,6 +123,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLW-fb-5pJ">
+                                <rect key="frame" x="364" y="46" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addButton:" destination="yFU-Po-AMV" eventType="touchUpInside" id="BQW-z6-Imm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="La1-55-DWO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -141,6 +141,7 @@
                     <connections>
                         <outlet property="addButtonOutlet" destination="YLW-fb-5pJ" id="wVN-8k-WLL"/>
                         <outlet property="colorLabel" destination="0J9-fn-c8H" id="bR9-Ft-1sk"/>
+                        <outlet property="colorSwitch" destination="5Bc-83-kyg" id="IG7-T0-swM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPP-Ok-ITP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -14,13 +14,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var birthdataTextField: UITextField!
     
-    var birthdayPicker = UIDatePicker()
-    
+    private var birthdayPicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createDatePicker()
+        
+        mailTextField.keyboardType = .emailAddress
         
         nameTextField.delegate = self
         surnameTextField.delegate = self
@@ -40,7 +41,7 @@ class LoginViewController: UIViewController {
     
     //MARK:- Methods
     
-    func createDatePicker() {
+    private func createDatePicker() {
         birthdayPicker.locale = .init(identifier: "Russian")
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -52,7 +53,7 @@ class LoginViewController: UIViewController {
         birthdataTextField.inputView = birthdayPicker
     }
     
-    @objc func donePressed() {
+    @objc private func donePressed() {
         let formatter = DateFormatter()
         formatter.locale = .init(identifier: "Russian")
         formatter.dateStyle = .medium
@@ -67,12 +68,10 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "loginSegue", sender: nil)
     }
-    
-    
-    
+
 }
 
-    //MARK:- Extensions
+//MARK:- Extensions
 
 extension LoginViewController: UITextFieldDelegate {
     
